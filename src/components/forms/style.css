@@ -1,4 +1,49 @@
+.container__form{
+    margin: auto;
+}
+
 .containerInput{
     display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    margin: 1rem 0;
+}
+
+
+.containerInput label{
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: .8rem;
+}
+
+
+.containerInput input{
+    border: none;
+    outline: none;
+    border-bottom: 1px solid seagreen;
+}
+
+.containerTextArea{
+    display: flex;
     flex-direction: column;
+}
+
+.containerTextArea textarea{
+    resize: none;
+}
+
+.btnSaveTodo{
+    width: 100%;
+    margin-top: 1rem;
+    outline: none;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    background-color: rgb(35, 224, 199);
+    color: whitesmoke;
+    text-transform: uppercase;
+    font-weight: bolder;
+    box-sizing: border-box;
 }

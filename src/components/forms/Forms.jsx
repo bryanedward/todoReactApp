@@ -1,4 +1,5 @@
 import React from 'react'
+import './style.css'
 import { useForm } from '../hooks/useForm'
 
 export const Forms = ({ saveTodo }) => {
@@ -13,32 +14,36 @@ export const Forms = ({ saveTodo }) => {
     saveTodo({
       id: new Date().getMilliseconds(),
       title: title,
-      description: description
+      description: description,
     })
     resetInput()
   }
 
   return (
-    <div>
+    <div className='container__form'>
       <form action="" onSubmit={addTodo}>
         <div className='containerInput'>
-          <label htmlFor="">Titulo</label>
+          <label htmlFor="">Titulo de la tarea</label>
           <input type="text"
             name='title'
             title='titulo de la tarea'
             autoComplete='off'
             value={title}
+            required="required"
             onChange={changeInput} />
         </div>
-        <div className='containerInput'>
-          <label htmlFor="">Descripcion</label>
-          <input
-            type="text"
-            name="description"
+        <div className='containerTextArea'>
+          <label htmlFor="">Descripcion de la tarea</label>
+          <textarea name="description" id=""
+            cols="30"
+            autoComplete='off'
+            required="required"
             value={description}
-            onChange={changeInput} />
+            onChange={changeInput}
+            rows="10">
+          </textarea>
         </div>
-        <button>Guardar tarea</button>
+        <button className='btnSaveTodo'>Guardar tarea</button>
       </form>
     </div>
   )

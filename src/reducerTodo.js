@@ -1,7 +1,8 @@
-export const reducerTodo = (initialState, action) => {
+export const reducerTodo = (initialState = [], action) => {
+    
     switch (action.type) {
         case 'save':
-            return [...initialState , action.payload]
+            return initialState.length === 0 ? [action.payload] : [...initialState, action.payload]
         default:
             return initialState;
     }
