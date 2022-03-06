@@ -1,10 +1,11 @@
 import React from 'react'
 import './style.css'
 
-export const ItemsTodo = ({id, nameTodo, description}) => {
+export const ItemsTodo = ({id, title, description}) => {
   return (
     <div className='itemTodo'>
-        <p>{nameTodo}</p>
+        <h3>{title}</h3>
+        <p>{description}</p>
     </div>
   )
 }
